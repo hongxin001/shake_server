@@ -9,11 +9,11 @@
 
 'use strict';
 
-const router = require('express').Router();
+var router = require('express').Router();
 
 // 添加一个模块
-const hello = require('./hello');
-const game = require('./game');
+var hello = require('./hello');
+var game = require('./game');
 
 // 一个 API 路由下的 hello 接口，访问 /api/hello
 router.get('/hello', hello.hello);
@@ -21,3 +21,5 @@ router.get('/hello', hello.hello);
 router.get('/game', game.show);
 
 module.exports = router;
+
+//# sourceMappingURL=api-router-compiled.js.map
