@@ -15,60 +15,63 @@ let pub = {};
 
 pub.show = (req, res) => {
     // 控制台输出
-    tool.l('game');
+    tool.l('article');
 
     // 创建该类的一个实例
-    var Game = AV.Object.extend('game');
+    var Game = AV.Object.extend('article');
     var query = new AV.Query(Game);
 
-    // 获取单个游戏
+    // 获取单个文章
     //query.get('567ff3d200b042c0920f4d14', {
-    //  success: function(game) {
+    //  success: function(article) {
     //    // 成功获得实例
-    //    var gameName = game.get('name');
-    //    var gameUrl = game.get('url');
+    //    var articleTitle = article.get('title');
+    //    var articleContent = article.get('content');
+    //    var articleImage = article.get('image');
     //    res.send({
-    //      gameName: gameName,
-    //      gameUrl: gameUrl
+    //      articleTitle: articleTitle,
+    //      articleContent: articleContent
+    //      articleImage: articleImage
     //    });
     //  },
     //  error: function(error) {
     //    res.send({
-    //      error:"get games failed"
+    //      error:"get articles failed"
     //    });
     //  }
     //});
 
-    // 获取整个游戏集
+    // 获取整个文章集
     //query.find({
     //    success: function (results) {
     //        tool.l('Successfully retrieved ' + results.length + ' posts.');
     //        // 处理返回的结果数据
     //        for (var i = 0; i < results.length; i++) {
     //            var object = results[i];
-    //            tool.l(object.id + ' - ' + object.get('name') + ' - ' + object.get('url'));
+    //            tool.l(object.id + ' - ' + object.get('title') + ' - ' + object.get('content') + ' - ' + object.get('image'));
     //        }
     //    },
     //    error: function (error) {
     //        res.send({
-    //            error: "find games failed"
+    //            error: "find articles failed"
     //        });
     //    }
     //});
 
-    // 输出游戏接口
+    // 输出文章接口
     query.find({
         success: function (results) {
             var num = parseInt(Math.random() * results.length);
             tool.l(num);
             res.send({
-                name: results[num].get('name'),
-                url: results[num].get('url')
+                title: results[num].get('title'),
+                content: results[num].get('content'),
+                image: results[num].get('image')
             });
         },
         error: function (error) {
             res.send({
-                error: "find games failed"
+                error: "find articles failed"
             });
         }
     });
