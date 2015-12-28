@@ -12,14 +12,18 @@
 let pub = {};
 
 pub.l = (msg) => {
-  console.log('\n\n', msg, '\n\n');
+    console.log('\n\n', msg, '\n\n');
 };
 
 pub.fail = (res, err) => {
-  res.status(err.status).send({
-    err: err.status,
-    msg: err.msg
-  });
+    res.status(err.status).send({
+        err: err.status,
+        msg: err.msg
+    });
+};
+
+pub.random = (arr) => {
+    return parseInt(Math.random() * arr.length);
 };
 
 module.exports = pub;

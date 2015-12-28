@@ -20,7 +20,6 @@ const crawler = require('./crawler');
 
 // 一个 API 路由下的 hello 接口，访问 /api/hello
 router.get('/hello', hello.hello);
-
 router.get('/game', game.show);
 router.get('/video', video.show);
 router.get('/article', article.show);
