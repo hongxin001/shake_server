@@ -65,8 +65,10 @@ pub.show = (req, res) => {
             tool.l(num);
             res.send({
                 title: results[num].get('title'),
-                content: results[num].get('content'),
-                image: results[num].get('image')
+                url: results[num].get('url'),
+                sub: results[num].get('sub'),
+                icon: results[num].get('icon'),
+                share: results[num].get('share')
             });
         },
         error: function (error) {

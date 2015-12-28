@@ -25,7 +25,7 @@ pub.show = (req, res) => {
     //query.get('567ff3d200b042c0920f4d14', {
     //  success: function(game) {
     //    // 成功获得实例
-    //    var gameName = game.get('name');
+    //    var gameName = game.get('title');
     //    var gameUrl = game.get('url');
     //    res.send({
     //      gameName: gameName,
@@ -46,7 +46,7 @@ pub.show = (req, res) => {
     //        // 处理返回的结果数据
     //        for (var i = 0; i < results.length; i++) {
     //            var object = results[i];
-    //            tool.l(object.id + ' - ' + object.get('name') + ' - ' + object.get('url'));
+    //            tool.l(object.id + ' - ' + object.get('title') + ' - ' + object.get('url'));
     //        }
     //    },
     //    error: function (error) {
@@ -62,8 +62,11 @@ pub.show = (req, res) => {
             var num = parseInt(Math.random() * results.length);
             tool.l(num);
             res.send({
-                name: results[num].get('name'),
-                url: results[num].get('url')
+                title: results[num].get('title'),
+                url: results[num].get('url'),
+                sub: results[num].get('sub'),
+                icon: results[num].get('icon'),
+                share: results[num].get('share')
             });
         },
         error: function (error) {

@@ -64,20 +64,20 @@ pub.show = (req, res) => {
             var games = [];
             var $ = cheerio.load(sres.text);
             $('h2 a').each(function (idx, element) {
-                var name = $(element).text();
+                var title = $(element).text();
                 var urlOrigin = $(element).attr('href');
                 // 处理字符串
                 var urlArr = urlOrigin.split('com/');
                 var url = urlArr[0] + "com/game/" + urlArr[1];
                 games.push({
-                    title: name,
+                    title: title,
                     url: url
                 });
                 // 保存游戏数据
                 //var Game = AV.Object.extend('game');
                 //var query = new Game();
                 //query.save({
-                //    name: name,
+                //    title: title,
                 //    url: url
                 //}, {
                 //    success: function (query) {
