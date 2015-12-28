@@ -8,59 +8,57 @@
 // 一些工具方法
 
 'use strict';
-const AV = require('leanengine');
-const tool = require('./tool');
+var AV = require('leanengine');
+var tool = require('./tool');
 
-let pub = {};
+var pub = {};
 
-pub.show = (req, res) => {
+pub.show = function (req, res) {
     // 控制台输出
-    tool.l('article');
+    tool.l('video');
 
     // 创建该类的一个实例
-    var Game = AV.Object.extend('article');
-    var query = new AV.Query(Game);
+    var Video = AV.Object.extend('video');
+    var query = new AV.Query(Video);
 
-    // 获取单个文章
+    // 获取单个视频
     //query.get('567ff3d200b042c0920f4d14', {
-    //  success: function(article) {
+    //  success: function(video) {
     //    // 成功获得实例
-    //    var articleTitle = article.get('title');
-    //    var articleContent = article.get('content');
-    //    var articleImage = article.get('image');
+    //    var videoName = video.get('name');
+    //    var videoUrl = video.get('url');
     //    res.send({
-    //      articleTitle: articleTitle,
-    //      articleContent: articleContent
-    //      articleImage: articleImage
+    //      videoName: videoName,
+    //      videoUrl: videoUrl
     //    });
     //  },
     //  error: function(error) {
     //    res.send({
-    //      error:"get articles failed"
+    //      error:"get videos failed"
     //    });
     //  }
     //});
 
-    // 获取整个文章集
+    // 获取整个视频集
     //query.find({
     //    success: function (results) {
     //        tool.l('Successfully retrieved ' + results.length + ' posts.');
     //        // 处理返回的结果数据
     //        for (var i = 0; i < results.length; i++) {
     //            var object = results[i];
-    //            tool.l(object.id + ' - ' + object.get('title') + ' - ' + object.get('content') + ' - ' + object.get('image'));
+    //            tool.l(object.id + ' - ' + object.get('name') + ' - ' + object.get('url'));
     //        }
     //    },
     //    error: function (error) {
     //        res.send({
-    //            error: "find articles failed"
+    //            error: "find videos failed"
     //        });
     //    }
     //});
 
-    // 输出文章接口
+    // 输出视频接口
     query.find({
-        success: function (results) {
+        success: function success(results) {
             var num = tool.random(results);
             tool.l(num);
             res.send({
@@ -71,12 +69,14 @@ pub.show = (req, res) => {
                 share: results[num].get('share')
             });
         },
-        error: function (error) {
+        error: function error(_error) {
             res.send({
-                error: "find articles failed"
+                error: "find videos failed"
             });
         }
     });
 };
 
 module.exports = pub;
+
+//# sourceMappingURL=video-compiled.js.map

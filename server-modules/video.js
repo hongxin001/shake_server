@@ -59,7 +59,7 @@ pub.show = (req, res) => {
     // 输出视频接口
     query.find({
         success: function (results) {
-            var num = parseInt(Math.random() * results.length);
+            var num = tool.random(results);
             tool.l(num);
             res.send({
                 title: results[num].get('title'),

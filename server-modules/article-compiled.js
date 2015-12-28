@@ -8,12 +8,12 @@
 // 一些工具方法
 
 'use strict';
-const AV = require('leanengine');
-const tool = require('./tool');
+var AV = require('leanengine');
+var tool = require('./tool');
 
-let pub = {};
+var pub = {};
 
-pub.show = (req, res) => {
+pub.show = function (req, res) {
     // 控制台输出
     tool.l('article');
 
@@ -60,7 +60,7 @@ pub.show = (req, res) => {
 
     // 输出文章接口
     query.find({
-        success: function (results) {
+        success: function success(results) {
             var num = tool.random(results);
             tool.l(num);
             res.send({
@@ -71,7 +71,7 @@ pub.show = (req, res) => {
                 share: results[num].get('share')
             });
         },
-        error: function (error) {
+        error: function error(_error) {
             res.send({
                 error: "find articles failed"
             });
@@ -80,3 +80,5 @@ pub.show = (req, res) => {
 };
 
 module.exports = pub;
+
+//# sourceMappingURL=article-compiled.js.map

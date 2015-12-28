@@ -8,24 +8,24 @@
 
 'use strict';
 
-let pub = {};
+var pub = {};
 
-pub.l = (msg) => {
+pub.l = function (msg) {
     console.log('\n\n', msg, '\n\n');
 };
 
-pub.fail = (res, err) => {
+pub.fail = function (res, err) {
     res.status(err.status).send({
         err: err.status,
         msg: err.msg
     });
 };
 
-pub.random = (arr) => {
+pub.random = function (arr) {
     return parseInt(Math.random() * arr.length);
 };
 
-pub.save = (table,items) => {
+pub.save = function (table, items) {
     var Table = AV.Object.extend(table);
     var query = new Table();
     query.save({
@@ -35,16 +35,18 @@ pub.save = (table,items) => {
         icon: items.get('icon'),
         share: items.get('share')
     }, {
-        success: function (query) {
+        success: function success(query) {
             // 成功保存之后，执行其他逻辑.
             tool.l('New object created with objectId: ' + query.id);
         },
-        error: function (query, error) {
+        error: function error(query, _error) {
             // 失败之后执行其他逻辑
             // error 是 AV.Error 的实例，包含有错误码和描述信息.
-            tool.l('Failed to create new object, with error message: ' + error.message);
+            tool.l('Failed to create new object, with error message: ' + _error.message);
         }
     });
 };
 
 module.exports = pub;
+
+//# sourceMappingURL=tool-compiled.js.map
