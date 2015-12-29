@@ -7,6 +7,8 @@
 // 一些工具方法
 
 'use strict';
+var cheerio = require('cheerio');
+var superagent = require('superagent');
 
 let pub = {};
 
@@ -25,7 +27,7 @@ pub.random = (arr) => {
     return parseInt(Math.random() * arr.length);
 };
 
-pub.save = (table,items) => {
+pub.save = (table, items) => {
     var Table = AV.Object.extend(table);
     var query = new Table();
     query.save({
