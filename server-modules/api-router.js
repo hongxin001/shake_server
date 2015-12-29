@@ -25,5 +25,6 @@ router.get('/video', video.show);
 router.get('/article', article.show);
 router.get('/crawler/game', crawler.game);
 router.get('/crawler/video', crawler.video);
+router.get('/crawler/article', crawler.article);
 
 module.exports = router;
