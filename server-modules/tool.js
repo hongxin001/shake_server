@@ -7,8 +7,6 @@
 // 一些工具方法
 
 'use strict';
-var cheerio = require('cheerio');
-var superagent = require('superagent');
 
 let pub = {};
 

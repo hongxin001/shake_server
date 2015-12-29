@@ -23,6 +23,7 @@ router.get('/hello', hello.hello);
 router.get('/game', game.show);
 router.get('/video', video.show);
 router.get('/article', article.show);
-router.get('/crawler', crawler.show);
+router.get('/crawler/game', crawler.game);
+router.get('/crawler/video', crawler.video);
 
 module.exports = router;
