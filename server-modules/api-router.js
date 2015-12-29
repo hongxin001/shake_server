@@ -16,15 +16,15 @@ const hello = require('./hello');
 const game = require('./game');
 const video = require('./video');
 const article = require('./article');
-//const crawler = require('./crawler');
+const crawler = require('./crawler');
 
 // 一个 API 路由下的 hello 接口，访问 /api/hello
 router.get('/hello', hello.hello);
 router.get('/game', game.show);
 router.get('/video', video.show);
 router.get('/article', article.show);
-//router.get('/crawler/game', crawler.game);
-//router.get('/crawler/video', crawler.video);
-//router.get('/crawler/article', crawler.article);
+router.get('/crawler/game', crawler.game);
+router.get('/crawler/video', crawler.video);
+router.get('/crawler/article', crawler.article);
 
 module.exports = router;

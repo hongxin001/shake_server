@@ -16,17 +16,15 @@
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/array-union/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/path-is-absolute/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits_browser-compiled.js" />
-        <item url="file://$PROJECT_DIR$/server-modules/api-router-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/test-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits-compiled.js" />
-        <item url="file://$PROJECT_DIR$/server-modules/crawler-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/glob-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/sync-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/common-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/test-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/inflight-compiled.js" />
-        <item url="file://$PROJECT_DIR$/server-modules/game-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy-compiled.js" />
+        <item url="file://$PROJECT_DIR$/server-modules/api-router-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy-compiled.js" />
       </sourceFilesUrls>
@@ -214,6 +212,8 @@
       <root url="file://$PROJECT_DIR$/node_modules/mongodb/t-compiled.js" />
       <root url="file://$PROJECT_DIR$/server-modules/crawler-compiled.js" />
       <root url="file://$PROJECT_DIR$/server-modules/game-compiled.js" />
+      <root url="file://$PROJECT_DIR$/server-modules/crawler-compiled.js" />
+      <root url="file://$PROJECT_DIR$/server-modules/game-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/once-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/rimraf/node_modules/glob/node_modules/once/once-compiled.js" />
@@ -228,17 +228,15 @@
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/array-union/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/path-is-absolute/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits_browser-compiled.js" />
-      <root url="file://$PROJECT_DIR$/server-modules/api-router-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/test-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inherits/inherits-compiled.js" />
-      <root url="file://$PROJECT_DIR$/server-modules/crawler-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/glob-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/sync-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/common-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/test-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/inflight-compiled.js" />
-      <root url="file://$PROJECT_DIR$/server-modules/game-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy-compiled.js" />
+      <root url="file://$PROJECT_DIR$/server-modules/api-router-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/web-project/node_modules/del/node_modules/globby/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy-compiled.js" />
     </CLASSES>
