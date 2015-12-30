@@ -7,6 +7,7 @@
 // 一些工具方法
 
 'use strict';
+const AV = require('leanengine');
 
 let pub = {};
 
@@ -29,11 +30,11 @@ pub.save = (table, items) => {
     var Table = AV.Object.extend(table);
     var query = new Table();
     query.save({
-        title: items.get('title'),
-        url: items.get('url'),
-        sub: items.get('sub'),
-        icon: items.get('icon'),
-        share: items.get('share')
+        title: items.title,
+        url: items.url,
+        sub: items.sub,
+        icon: items.icon,
+        share: 0
     }, {
         success: function (query) {
             // 成功保存之后，执行其他逻辑.
